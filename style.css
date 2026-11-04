@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --white-color: #fff;
+    --dark-color: #252522;
+}
+
+header {
+    width: 100%;
+}
+nav{
+    background-color:  #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 40px;
+    background-color: #fff;
+    background: linear-gradient(to bottom, rgba(58, 54, 54, 0.329), transparent);
+}
+
+.na-logo {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: #130c7e;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+    border-radius: 100px;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(backgrounf1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.nav-btn {
+    background-color: #130c7e;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #cf6320;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
