@@ -1,6 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,48 +13,65 @@
     font-family: "Poppins", sans-serif;
 }
 
-:root{
+:root {
     --white-color: #fff;
     --dark-color: #252522;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
 header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 100;
 }
-nav{
-    background-color:  #fff;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+nav {
+    background: transparent;
+    box-shadow: none;
 }
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 40px;
-    background-color: #fff;
-    background: linear-gradient(to bottom, rgba(58, 54, 54, 0.329), transparent);
+
+    width: 100%;
+    padding: 12px 40px;
+
+    /* Transparent gradient blending into hero video */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0.08),
+        transparent
+    );
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
 }
 
 .na-logo {
     text-decoration: none;
-    color: #fff;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 500;
-    
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-    color: #130c7e;
+    color: var(--white-color);
 }
 
 .logo-img {
@@ -59,25 +81,379 @@ nav{
     border-radius: 100px;
 }
 
-body{
-    min-height: 100vh;
-    background-image: url(backgrounf1.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
 }
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #E8742A;
+}
+
+
+/* REQUEST PICKUP BUTTON */
+
 .nav-btn {
     background-color: #130c7e;
-    color: #fff;
+    color: var(--white-color);
+
     padding: 10px 22px;
     border-radius: 50px;
+
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
 }
 
 .nav-btn:hover {
     background-color: #cf6320;
+    color: var(--white-color);
     transform: translateY(-2px);
     text-decoration: none;
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #25D366;
+    color: var(--white-color);
+
+    padding: 12px 26px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.whatsapp-btn i {
+    font-size: 22px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe5b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #1b6f7a;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 100px 8% 60px;
+}
+
+
+/* HERO VIDEO BACKGROUND */
+
+.hero-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 75% center;
+
+    z-index: 0;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    color: var(--white-color);
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services {
+    position: relative;
+    z-index: 1;
+
+    background-color: var(--white-color);
+
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 30px;
+}
+
+
+/* SERVICES WRAPPER */
+
+.services-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.services-wrap .icon-list {
+    margin: 0;
+    max-width: none;
+}
+
+
+/* ICON LIST */
+
+.icon-list {
+    list-style: none;
+
+    max-width: 500px;
+    margin: 30px auto 0;
+
+    text-align: left;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 1.1rem;
+}
+
+.icon-list i {
+    color: #E8742A;
+
+    font-size: 1.3rem;
+    width: 28px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   PRICING SECTION
+========================= */
+
+.pricing {
+    margin-top: 60px;
+}
+
+.pricing-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.pricing-cards {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+
+    gap: 25px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* PRICE CARDS */
+
+.price-card {
+    background: var(--white-color);
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.price-card h4 {
+    background-color: #E8742A;
+    color: var(--white-color);
+
+    padding: 14px;
+
+    font-size: 1.2rem;
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 10px 24px;
+}
+
+.price-card li {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 1.05rem;
+}
+
+.price-card li:last-child {
+    border-bottom: none;
+}
+
+.price-card strong {
+    color: #E8742A;
+}
+
+.price-note {
+    background-color: #fff3e3;
+
+    padding: 14px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .services-wrap {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .nav-btn {
+        padding: 8px 14px;
+    }
+
+    .hero {
+        padding: 150px 6% 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-video {
+        object-position: 65% center;
+    }
+
+    .services {
+        padding: 60px 5%;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
 }

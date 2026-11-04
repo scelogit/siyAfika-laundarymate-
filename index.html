@@ -1,40 +1,289 @@
+
 <!DOCTYPE html>
-<!--tutorial site-->
-<html lang=""en>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title> Coffee website | scelo does dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SiyAfika Laundromat</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
+
+    <!-- NAVIGATION -->
     <header>
         <nav class="navbar">
-            <a href="#" class="na-logo">
-            <img src="logo.png" alt="SiyAfika Laundromat logo" class="logo-img">
+
+            <a href="#Home" class="na-logo">
+                <img src="logo.png"
+                     alt="SiyAfika Laundromat logo"
+                     class="logo-img">
             </a>
+
             <ul class="nav-menu">
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#Home" class="nav-link">Home</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Services</a>
+                    <a href="#Services" class="nav-link">Services</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">How It Works</a>
+                    <a href="#HowItWorks" class="nav-link">How It Works</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Other Services</a>
+                    <a href="#OtherServices" class="nav-link">Other Services</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link nav-btn">Request Pickup</a>
+                    <a href="https://wa.me/27XXXXXXXXX?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
+                       class="nav-link nav-btn"
+                       target="_blank"
+                       rel="noopener">
+                        Request Pickup
+                    </a>
                 </li>
+
             </ul>
+
         </nav>
     </header>
 
-    <h1>SiyAfika</h1>
+
+    <!-- HERO SECTION -->
+    <section id="Home" class="hero">
+
+        <!-- FULL BACKGROUND VIDEO -->
+        <video class="hero-video"
+               autoplay
+               loop
+               muted
+               playsinline>
+
+            <source src="machine_spin.mp4" type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <!-- OPTIONAL DARK OVERLAY -->
+        <div class="hero-overlay"></div>
+
+
+        <!-- HERO CONTENT -->
+        <div class="hero-content">
+
+            <h1>SiyAfika Laundromat</h1>
+
+            <p>
+                SiyAfika Laundromat is the best and the most trusted
+                genuinely eco-friendly dry wash &amp; fold services
+                with experienced and friendly staff. For your
+                convenience, we also provide pick-up &amp; drop-off
+                services for all our customers.
+            </p>
+
+            <a href="https://wa.me/27XXXXXXXXX?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
+               class="whatsapp-btn"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Chat on WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="Services" class="services">
+
+        <h2>Our Services</h2>
+
+        <div class="services-card">
+
+            <div class="services-info">
+
+                <div class="service-item">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                    <div>
+                        <h4>Wash, Rinse &amp; Fold</h4>
+                        <p>Clean, fresh and neatly folded.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    <div>
+                        <h4>Color-separated Wash</h4>
+                        <p>Lights and darks washed apart.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div>
+                        <h4>Commercial Wash Services</h4>
+                        <p>Bulk laundry for businesses.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <div>
+                        <h4>Eco-Friendly Washing</h4>
+                        <p>Gentle on your clothes and the planet.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="service-item">
+
+                    <i class="fa-solid fa-soap"></i>
+
+                    <div>
+                        <h4>Stain Removal</h4>
+                        <p>Tough stains treated with care.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRICING SECTION -->
+        <div class="pricing">
+
+            <h3 class="pricing-title">Pricing Packages</h3>
+
+            <div class="pricing-cards">
+
+
+                <!-- BASKETS -->
+                <div class="price-card">
+
+                    <h4>Baskets</h4>
+
+                    <ul>
+
+                        <li>
+                            <span>Small</span>
+                            <strong>R100</strong>
+                        </li>
+
+                        <li>
+                            <span>Large</span>
+                            <strong>R150</strong>
+                        </li>
+
+                        <li>
+                            <span>X Large</span>
+                            <strong>R180</strong>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- BLANKETS -->
+                <div class="price-card">
+
+                    <h4>Blankets</h4>
+
+                    <ul>
+
+                        <li>
+                            <span>Small</span>
+                            <strong>R80</strong>
+                        </li>
+
+                        <li>
+                            <span>Medium</span>
+                            <strong>R120</strong>
+                        </li>
+
+                        <li>
+                            <span>Large</span>
+                            <strong>R150</strong>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+                <div class="price-card">
+
+                    <h4>Delivery</h4>
+
+                    <ul>
+
+                        <li>
+                            <span>From</span>
+                            <strong>R40</strong>
+                        </li>
+
+                        <li>
+                            <span>Dry only from</span>
+                            <strong>R50</strong>
+                        </li>
+
+                    </ul>
+
+                    <p class="price-note">
+                        Same day laundromat<br>
+                        Softener &amp; perfume
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS PLACEHOLDER -->
+    <section id="HowItWorks"></section>
+
+    <!-- OTHER SERVICES PLACEHOLDER -->
+    <section id="OtherServices"></section>
+
 
 </body>
 </html>
-
