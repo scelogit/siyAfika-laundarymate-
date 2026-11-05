@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 
@@ -15,7 +14,8 @@
 
 :root {
     --white-color: #f7eff8;
-    --dark-color: #fffffe;
+    --dark-color: #fffffe;   /* used for nav links (white on the video) */
+    --text-color: #252522;   /* dark text on white sections */
 }
 
 html {
@@ -24,10 +24,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -57,7 +54,7 @@ nav {
     width: 100%;
     padding: 12px 40px;
 
-    /* Transparent gradient blending into hero video */
+    /* transparent gradient blending into the hero video */
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.530),
@@ -113,7 +110,7 @@ nav {
     font-weight: 600;
 
     transition: background-color 0.3s ease,
-    transform 0.2s ease;
+                transform 0.2s ease;
 }
 
 .nav-btn:hover {
@@ -163,17 +160,11 @@ nav {
 .hero {
     position: relative;
     overflow: hidden;
-
-    width: 100%;
     min-height: 100vh;
-
     background-color: #1b6f7a;
-
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    padding: 100px 8% 60px;
+    align-items: stretch;
+    padding: 130px 8% 190px;   /* top clears the navbar, bottom leaves room for P1 */
 }
 
 
@@ -181,17 +172,27 @@ nav {
 
 .hero-video {
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: 75% center;
-
     z-index: 0;
+}
+
+
+/* CURVED DARK PANEL BEHIND THE TEXT */
+
+.hero-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 76%;
+    background: linear-gradient(90deg, rgba(8, 40, 48, 0.78), rgba(8, 40, 48, 0.3));
+    border-bottom-right-radius: 40% 100%;
+    z-index: 1;
 }
 
 
@@ -200,32 +201,39 @@ nav {
 .hero-content {
     position: relative;
     z-index: 2;
-
-    max-width: 900px;
-
-    color: var(--white-color);
-
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   /* text at the top, button at the bottom */
+    align-items: flex-start;
+    text-align: left;
+    color: #fff;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.brand {
+    display: block;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
-.hero-content p {
-    line-height: 1.6;
-    margin-bottom: 25px;
+.brand-sub {
+    display: block;
+    margin-top: 10px;
+    font-size: clamp(1rem, 2.2vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #ffb37a;
 }
 
-.p2 {
-    width: 84%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    align-self: end;
-    justify-self: center;
+.hero-text p {
+    margin-top: 24px;
+    max-width: 480px;
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 
@@ -244,30 +252,7 @@ nav {
     text-align: center;
 }
 
-.services h2 {
-    margin-bottom: 30px;
-}
-
-
-/* SERVICES WRAPPER */
-
-.services-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-
-    align-items: center;
-
-    max-width: 1000px;
-    margin: 30px auto 0;
-}
-
-.services-wrap .icon-list {
-    margin: 0;
-    max-width: none;
-}
-
+/* three columns: P1 | services list | P2 */
 .services-top {
     display: grid;
     grid-template-columns: 1fr 1.1fr 1fr;
@@ -276,6 +261,7 @@ nav {
     margin: 0 auto;
 }
 
+/* P1: pulled up so it overlaps the banner */
 .p1 {
     width: 100%;
     height: 460px;
@@ -286,37 +272,57 @@ nav {
     z-index: 5;
 }
 
+/* P2: sits at the bottom of its column */
+.p2 {
+    width: 84%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    align-self: end;
+    justify-self: center;
+}
 
-/* ICON LIST */
+.services-center h2 {
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
 
-.icon-list {
-    list-style: none;
-
-    max-width: 500px;
-    margin: 30px auto 0;
-
+.services-info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
     text-align: left;
 }
 
-.icon-list li {
+.service-item {
     display: flex;
     align-items: center;
+    gap: 16px;
+    color: var(--text-color);
+}
 
-    gap: 14px;
-    padding: 12px 0;
-
-    border-bottom: 1px solid #eee;
-
+.service-item i {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #E8742A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
 }
 
-.icon-list i {
-    color: #E8742A;
+.service-item h4 {
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+}
 
-    font-size: 1.3rem;
-    width: 28px;
-
-    text-align: center;
+.service-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 
@@ -331,18 +337,13 @@ nav {
 .pricing-title {
     font-size: 1.8rem;
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .pricing-cards {
     display: grid;
-
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(240px, 1fr)
-    );
-
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
-
     max-width: 900px;
     margin: 0 auto;
 }
@@ -364,7 +365,6 @@ nav {
 
 .price-card:hover {
     transform: translateY(-6px);
-
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
@@ -391,6 +391,7 @@ nav {
     border-bottom: 1px solid #eee;
 
     font-size: 1.05rem;
+    color: var(--text-color);
 }
 
 .price-card li:last-child {
@@ -408,82 +409,7 @@ nav {
 
     font-size: 0.9rem;
     line-height: 1.5;
-}
-
-
-/* =========================
-    RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-        padding: 12px 20px;
-    }
-
-    .nav-menu {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-
-    .hero-content h1 {
-        font-size: 2.3rem;
-    }
-
-    .services-wrap {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* SMALL SCREENS */
-
-@media (max-width: 500px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-menu {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .nav-link {
-        font-size: 0.8rem;
-    }
-
-    .nav-btn {
-        padding: 8px 14px;
-    }
-
-    .hero {
-        padding: 150px 6% 60px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .hero-video {
-        object-position: 65% center;
-    }
-
-    .services {
-        padding: 60px 5%;
-    }
-
-    .pricing-cards {
-        grid-template-columns: 1fr;
-    }
-
+    color: var(--text-color);
 }
 
 
@@ -716,9 +642,97 @@ nav {
 }
 
 
-/* MOBILE RESPONSIVENESS */
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETS AND PHONES: stack the services layout */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 130px 6% 60px;     /* P1 no longer overlaps, so less bottom space */
+    }
+
+    .hero-panel {
+        width: 100%;
+        border-bottom-right-radius: 0;
+        background: rgba(8, 40, 48, 0.6);
+    }
+
+    .services-top {
+        grid-template-columns: 1fr;
+    }
+
+    .p1 {
+        margin-top: 0;
+        height: 320px;
+    }
+
+    .p2 {
+        width: 100%;
+        height: 280px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .nav-menu {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+}
+
+
+/* SMALL SCREENS */
 
 @media (max-width: 500px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .nav-btn {
+        padding: 8px 14px;
+    }
+
+    .hero {
+        padding: 190px 6% 60px;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .hero-video {
+        object-position: 65% center;
+    }
+
+    .services {
+        padding: 60px 5%;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
 
     .ai-chat-widget {
         right: 15px;
@@ -735,4 +749,3 @@ nav {
     }
 
 }
-
