@@ -642,6 +642,8 @@ nav {
 }
 
 
+
+
 /* =========================
    RESPONSIVE DESIGN
 ========================= */
@@ -671,7 +673,7 @@ nav {
 
     .p2 {
         width: 100%;
-        height: 280px;
+        height: 50px;
     }
 
 }
@@ -748,4 +750,195 @@ nav {
         padding: 13px 18px;
     }
 
+}
+
+.p2 {   
+    width: 50%;
+    max-width: 1100px;
+    height: 390px;
+    margin: 90px;
+}
+
+.info-section {
+  padding: 85px 7%;
+  background: #f7f1f8;
+  font-family: Arial, sans-serif;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading span,
+.location-heading span {
+  color: #e56c45;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  color: #19152b;
+  margin: 12px 0;
+}
+
+.section-heading p,
+.location-heading p {
+  color: #777;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(30, 20, 50, .10);
+  min-width: 0;
+}
+
+.card-image {
+  position: relative;
+  height: 390px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hours-overlay {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.94);
+  padding: 25px;
+  border-radius: 12px;
+  width: 210px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+
+.open-label {
+  color: #e45c31;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #36ae70;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.hours-overlay h3 {
+  color: #19152b;
+  margin: 18px 0;
+}
+
+.hours-overlay p {
+  color: #777;
+  font-size: 14px;
+}
+
+.hours-overlay strong {
+  display: block;
+  color: #19152b;
+  font-size: 20px;
+  margin: 10px 0 25px;
+}
+
+.hours-overlay small {
+  color: #777;
+  font-size: 11px;
+}
+
+.location-card {
+  padding: 25px;
+}
+
+.location-heading {
+  margin-bottom: 20px;
+}
+
+.location-heading h3 {
+  color: #19152b;
+  font-size: 26px;
+  margin: 10px 0;
+}
+
+.map-container {
+  height: 265px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.directions-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 22px;
+  background: #171080;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.directions-btn:hover {
+  background: #e56c45;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    padding: 60px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    height: 350px;
+  }
+
+  .hours-overlay {
+    right: 15px;
+    width: 180px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-image {
+    height: 300px;
+  }
+
+  .hours-overlay {
+    right: 10px;
+    width: 155px;
+    padding: 14px;
+  }
+
+  .hours-overlay strong {
+    font-size: 16px;
+  }
 }
