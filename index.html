@@ -21,13 +21,23 @@
     <header>
         <nav class="navbar">
 
+
+
             <a href="#Home" class="na-logo">
                 <img src="logo.png"
                     alt="SiyAfika Laundromat logo"
                     class="logo-img">
             </a>
 
-            <ul class="nav-menu">
+
+    <button class="menu-toggle" id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+     </button>
+
+
+            <ul class="nav-menu" id="nav-menu">
 
                 <li class="nav-item">
                     <a href="#Home" class="nav-link">Home</a>
@@ -287,7 +297,7 @@
         <!-- LEFT SIDE: LAUNDROMAT IMAGE -->
         <div class="contact-image">
 
-            <img src="blue.jpg"
+            <img src="phone.png"
                  alt="SiyAfika Laundromat washing machines and fresh laundry">
 
             <div class="contact-image-caption">
@@ -400,106 +410,64 @@
 </section>
 
 
+
 <footer class="footer">
 
-    <div class="footer-container">
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-social">
 
-        <!-- BRAND / LOGO -->
-        <div class="footer-brand">
+        <a href="https://wa.me/27614422382"
+           target="_blank" rel="noopener"
+           aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-            <img src="logo.png"
-                 alt="SiyAfika Laundromat Logo"
-                 class="footer-logo">
+        <a href="#"
+           aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-            <h3>SiyAfika Laundromat</h3>
+        <a href="#"
+           aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
 
-            <p>
-                Fresh, clean and delivered with care.
-                We provide trusted eco-friendly laundry
-                services to make your life easier.
-            </p>
+        <a href="#"
+           aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
 
-        </div>
-
-
-        <!-- QUICK LINKS -->
-        <div class="footer-links">
-
-            <h4>Quick Links</h4>
-
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#Services">Our Services</a></li>
-                <li><a href="#HowItWorks">How It Works</a></li>
-                <li><a href="#OtherServices">Other Services</a></li>
-                <li><a href="#Contact">Contact Us</a></li>
-            </ul>
-
-        </div>
+    </div>
 
 
-        <!-- SOCIAL MEDIA -->
-        <div class="footer-social">
+    <!-- BUSINESS DESCRIPTION -->
+    <div class="footer-description">
 
-            <h4>Follow Us</h4>
+        <p>
+            SiyAfika Laundromat is dedicated to making
+            laundry easier with fresh, clean and reliable
+            services. We take pride in providing quality
+            and eco-friendly laundry care, delivered with
+            care and convenience.
+        </p>
 
-            <p>Stay connected with SiyAfika Laundromat.</p>
-
-            <div class="social-links">
-
-                <a href="https://wa.me/27614422382"
-                   target="_blank" rel="noopener">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp
-                </a>
-
-                <a href="#"
-                   target="_blank" rel="noopener">
-                    <i class="fa-brands fa-facebook"></i>
-                    Facebook
-                </a>
-
-                <a href="#"
-                   target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
-
-                <a href="#"
-                   target="_blank" rel="noopener">
-                    <i class="fa-brands fa-tiktok"></i>
-                    TikTok
-                </a>
-
-            </div>
-
-        </div>
+    </div>
 
 
-        <!-- BUSINESS HOURS & EMAIL -->
-        <div class="footer-hours">
+    <!-- LOGO -->
+    <div class="footer-brand">
 
-            <h4>Business Hours</h4>
+        <img src="logo.png"
+             alt="SiyAfika Laundromat Logo"
+             class="footer-logo">
 
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                Monday - Sunday
-            </p>
+    </div>
 
-            <p class="footer-time">
-                07:00 AM - 06:00 PM
-            </p>
 
-            <h4 class="footer-email-heading">Email Us</h4>
+    <!-- LOCATION -->
+    <div class="footer-location">
 
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:siyafikalaundromat@gmail.com">
-                    siyafikalaundromat@gmail.com
-                </a>
-            </p>
-
-        </div>
+        <p>South Africa | ZAR (R)</p>
 
     </div>
 
@@ -512,20 +480,10 @@
             All Rights Reserved.
         </p>
 
-        <p>
-            Proudly Serving Since 2020
-        </p>
-
     </div>
 
 </footer>
 
-
-
-
-
-
-    
 
 <!-- AI CHATBOT WIDGET -->
 
@@ -603,69 +561,137 @@
 <!-- CHATBOT JAVASCRIPT -->
 <script>
 
-    const aiChatButton = document.getElementById("aiChatButton");
-    const aiChatWindow = document.getElementById("aiChatWindow");
-    const aiCloseButton = document.getElementById("aiCloseButton");
+   
+/* =========================
+   CHATBOT
+========================= */
 
-    const aiChatForm = document.getElementById("aiChatForm");
-    const aiMessageInput = document.getElementById("aiMessageInput");
-    const aiChatMessages = document.getElementById("aiChatMessages");
+const aiChatButton = document.getElementById("aiChatButton");
+const aiChatWindow = document.getElementById("aiChatWindow");
+const aiCloseButton = document.getElementById("aiCloseButton");
+
+const aiChatForm = document.getElementById("aiChatForm");
+const aiMessageInput = document.getElementById("aiMessageInput");
+const aiChatMessages = document.getElementById("aiChatMessages");
+
+// OPEN CHAT
+aiChatButton.addEventListener("click", function () {
+    aiChatWindow.classList.add("active");
+    aiChatButton.style.display = "none";
+});
+
+// CLOSE CHAT
+aiCloseButton.addEventListener("click", function () {
+    aiChatWindow.classList.remove("active");
+    aiChatButton.style.display = "flex";
+});
+
+// SEND MESSAGE
+aiChatForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const message = aiMessageInput.value.trim();
+
+    if (message === "") return;
+
+    const userMessage = document.createElement("div");
+    userMessage.className = "ai-message user-message";
+    userMessage.textContent = message;
+
+    aiChatMessages.appendChild(userMessage);
+
+    aiMessageInput.value = "";
+
+    // DEMO RESPONSE
+    const botMessage = document.createElement("div");
+    botMessage.className = "ai-message bot-message";
+
+    botMessage.textContent =
+        "Thanks for your message! I'm currently a demo assistant. AI integration is coming soon. 😊";
+
+    aiChatMessages.appendChild(botMessage);
+
+    // SCROLL TO LATEST MESSAGE
+    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+
+});
 
 
-    // OPEN CHAT
-    aiChatButton.addEventListener("click", function () {
-        aiChatWindow.classList.add("active");
-        aiChatButton.style.display = "none";
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", function () {
+
+    navMenu.classList.toggle("active");
+
+    const isOpen = navMenu.classList.contains("active");
+
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+});
+
+// CLOSE MENU AFTER CLICKING A LINK
+document.querySelectorAll(".nav-menu a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
     });
 
+});
 
-    // CLOSE CHAT
-    aiCloseButton.addEventListener("click", function () {
-        aiChatWindow.classList.remove("active");
-        aiChatButton.style.display = "flex";
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 300) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 
+});
 
-    // SEND MESSAGE
-    aiChatForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        const message = aiMessageInput.value.trim();
-
-        if (message === "") return;
-
-
-        // DISPLAY USER MESSAGE
-        const userMessage = document.createElement("div");
-
-        userMessage.className = "ai-message user-message";
-        userMessage.textContent = message;
-
-        aiChatMessages.appendChild(userMessage);
-
-
-        // CLEAR INPUT
-        aiMessageInput.value = "";
-
-
-        // DEMO RESPONSE
-        const botMessage = document.createElement("div");
-
-        botMessage.className = "ai-message bot-message";
-
-        botMessage.textContent =
-            "Thanks for your message! I'm currently a demo assistant. AI integration is coming soon. 😊";
-
-        aiChatMessages.appendChild(botMessage);
-
-
-        // SCROLL TO LATEST MESSAGE
-        aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
-    });
 
 </script>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" class="back-to-top"
+        aria-label="Back to top"
+        title="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
 
 </body>
 </html>
