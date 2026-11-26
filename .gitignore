@@ -1,0 +1,10 @@
+# Secret API keys
+.env
+server/.env
+
+# Installed packages
+node_modules/
+server/node_modules/
+
+# Local environment files
+.DS_Store

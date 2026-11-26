@@ -42,8 +42,36 @@ header {
 }
 
 nav {
-    background: transparent;
-    box-shadow: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: fit-content;
+    max-width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    padding: 15px 35px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav.hide-nav {
+    transform: translate(-50%, -120%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .navbar {

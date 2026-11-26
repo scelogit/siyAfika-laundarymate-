@@ -76,7 +76,7 @@
     <section id="Home" class="hero">
 
         <video class="hero-video" autoplay loop muted playsinline>
-            <source src="machine_spin.mp4" type="video/mp4">
+            <source src="machine_spin_4K.mp4" type="video/mp4">
         </video>
 
         <div class="hero-panel"></div>
@@ -630,43 +630,77 @@
 
 
         // SEND MESSAGE
-        aiChatForm.addEventListener("submit", function (event) {
+        
+// SEND MESSAGE TO AI
+aiChatForm.addEventListener("submit", async function (event) {
 
-            event.preventDefault();
+    event.preventDefault();
 
-            const message = aiMessageInput.value.trim();
+    const message = aiMessageInput.value.trim();
 
-            if (message === "") return;
+    if (message === "") return;
 
+    // Display customer's message
+    const userMessage = document.createElement("div");
 
-            // DISPLAY USER MESSAGE
-            const userMessage = document.createElement("div");
+    userMessage.className = "ai-message user-message";
+    userMessage.textContent = message;
 
-            userMessage.className = "ai-message user-message";
-            userMessage.textContent = message;
+    aiChatMessages.appendChild(userMessage);
 
-            aiChatMessages.appendChild(userMessage);
+    // Clear input
+    aiMessageInput.value = "";
 
+    // Display loading message
+    const loadingMessage = document.createElement("div");
 
-            // CLEAR INPUT
-            aiMessageInput.value = "";
+    loadingMessage.className = "ai-message bot-message";
+    loadingMessage.textContent = "SiyAfika AI is typing...";
 
+    aiChatMessages.appendChild(loadingMessage);
 
-            // DEMO RESPONSE
-            const botMessage = document.createElement("div");
+    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
 
-            botMessage.className = "ai-message bot-message";
+    try {
 
-            botMessage.textContent =
-                "Thanks for your message! I'm currently a demo assistant. AI integration is coming soon. 😊";
+        // Send message to backend
+        const response = await fetch("http://localhost:3000/api/chat", {
 
-            aiChatMessages.appendChild(botMessage);
+            method: "POST",
 
+            headers: {
+                "Content-Type": "application/json"
+            },
 
-            // SCROLL TO LATEST MESSAGE
-            aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+            body: JSON.stringify({
+                message: message
+            })
 
         });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || "Unable to get a response.");
+        }
+
+        // Display AI response
+        loadingMessage.textContent = data.reply;
+
+    } catch (error) {
+
+        console.error("Chatbot error:", error);
+
+        loadingMessage.textContent =
+            "Sorry, I couldn't connect right now. Please try again.";
+
+    }
+
+    // Scroll to latest message
+    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+
+});
+
 
 
         // MOBILE NAVIGATION
@@ -703,6 +737,16 @@
             });
 
         });
+
+        const navbar = document.querySelector("nav");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 100) {
+                navbar.classList.add("hide-nav");
+        } else {
+        navbar.classList.remove("hide-nav");
+    }
+});
 
     </script>
 
