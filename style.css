@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
 
 /* =========================
    GENERAL SETTINGS
@@ -814,10 +821,10 @@ header {
 ========================= */
 
 .ai-chat-widget {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 9999;
+  position: fixed;
+  bottom: 70px;          /* was 25px → moved higher */
+  right: 25px;
+  z-index: 9999;
 }
 
 
@@ -1036,7 +1043,21 @@ header {
 .ai-chat-input button:hover {
     background: #E8742A;
 }
+/* On mobile */
+@media (max-width: 600px) {
+  .ai-chat-widget {
+    bottom: 65px;
+    right: 15px;
+  }
+}
 
+/* Hide Netlify badge */
+.netlify-badge,
+a[href*="netlify.com"],
+div[data-netlify-deploy-id],
+iframe[src*="netlify"] {
+  display: none !important;
+}
 
 /* =========================
    HOW IT WORKS / VISIT US
@@ -2003,3 +2024,21 @@ a.contact-item:hover {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+body > a[href*="netlify.com"] {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+    gap: 15px;
+  }
+
+  .nav-pill {
+    display: none; /* we will use the hamburger instead */
+  }
+
+  .nav-btn {
+    padding: 11px 18px;
+    font-size: 0.9rem;
+  }
+}
