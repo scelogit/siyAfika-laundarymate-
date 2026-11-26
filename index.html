@@ -1,754 +1,628 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>SiyAfika Laundromat</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- NAVIGATION -->
-    <header>
-        <nav class="navbar">
+   <!-- NAVIGATION -->
+<header>
+  <div class="navbar">
+    <!-- Logo -->
+    <a href="#Home" class="na-logo">
+      <img src="logo.png" alt="SiyAfika Laundromat logo" class="logo-img" />
+    </a>
 
-            <a href="#Home" class="na-logo">
-                <img src="logo.png"
-                    alt="SiyAfika Laundromat logo"
-                    class="logo-img">
-            </a>
+    <!-- Glass pill (desktop) -->
+    <nav class="nav-pill">
+      <ul class="nav-menu">
+        <li><a href="#Home" class="nav-link">Home</a></li>
+        <li><a href="#Services" class="nav-link">Services</a></li>
+        <li><a href="#About" class="nav-link">About</a></li>
+        <li><a href="#HowItWorks" class="nav-link">How It Works</a></li>
+        <li><a href="#Contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
 
-            <button class="menu-toggle" id="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <!-- Request Pickup button -->
+    <a href="#pickup" class="nav-btn">Request Pickup</a>
 
-            <ul class="nav-menu" id="nav-menu">
+    <!-- Mobile hamburger -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
 
-                <li class="nav-item">
-                    <a href="#Home" class="nav-link">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#Services" class="nav-link">Services</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#About" class="nav-link">About</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#HowItWorks" class="nav-link">How It Works</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#OtherServices" class="nav-link">Other Services</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#Contact" class="nav-link">Contact</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="https://wa.me/27614422382?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
-                        class="nav-link nav-btn"
-                        target="_blank"
-                        rel="noopener">
-                        Request Pickup
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-    </header>
-
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-list">
+      <li><a href="#Home" class="mobile-link">Home</a></li>
+      <li><a href="#Services" class="mobile-link">Services</a></li>
+      <li><a href="#About" class="mobile-link">About</a></li>
+      <li><a href="#HowItWorks" class="mobile-link">How It Works</a></li>
+      <li><a href="#Contact" class="mobile-link">Contact</a></li>
+      <li><a href="#pickup" class="mobile-btn">Request Pickup</a></li>
+    </ul>
+  </div>
+</header>
 
     <!-- HERO SECTION -->
     <section id="Home" class="hero">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="machine_spin_4K.mp4" type="video/mp4" />
+      </video>
 
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="machine_spin_4K.mp4" type="video/mp4">
-        </video>
+      <div class="hero-panel"></div>
 
-        <div class="hero-panel"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            <span class="brand">SiyAfika</span>
+            <span class="brand-sub">Laundromat</span>
+          </h1>
 
-        <div class="hero-content">
-
-            <div class="hero-text">
-                <h1>
-                    <span class="brand">SiyAfika</span>
-                    <span class="brand-sub">Laundromat</span>
-                </h1>
-
-                <p>
-                    SiyAfika Laundromat is the best and the most trusted
-                    genuinely eco-friendly dry wash &amp; fold services
-                    with experienced and friendly staff. For your
-                    convenience, we also provide pick-up &amp; drop-off
-                    services for all our customers.
-                </p>
-            </div>
-
-            <a href="https://wa.me/27798623910?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
-                class="whatsapp-btn"
-                target="_blank"
-                rel="noopener">
-
-                <i class="fa-brands fa-whatsapp"></i>
-                Chat on WhatsApp
-
-            </a>
-
+          <p>
+            SiyAfika Laundromat is the best and the most trusted genuinely
+            eco-friendly dry wash &amp; fold services with experienced and
+            friendly staff. For your convenience, we also provide pick-up &amp;
+            drop-off services for all our customers.
+          </p>
         </div>
-    </section>
 
+        <a
+          href="https://wa.me/27798623910?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
+          class="whatsapp-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Chat on WhatsApp
+        </a>
+      </div>
+    </section>
 
     <!-- SERVICES SECTION -->
     <section id="Services" class="services">
+      <div class="services-top">
+        <img src="laundry-woman.png" alt="Laundry picture 1" class="p1" />
 
-        <div class="services-top">
+        <div class="services-center">
+          <h2>Our Services</h2>
 
-            <img src="laundry-woman.png"
-                alt="Laundry picture 1"
-                class="p1">
-
-            <div class="services-center">
-
-                <h2>Our Services</h2>
-
-                <div class="services-card">
-
-                    <div class="services-info">
-
-                        <div class="service-item">
-                            <i class="fa-solid fa-shirt"></i>
-                            <div>
-                                <h4>Wash, Rinse &amp; Fold</h4>
-                                <p>Clean, fresh and neatly folded.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <i class="fa-solid fa-droplet"></i>
-                            <div>
-                                <h4>Color-separated Wash</h4>
-                                <p>Lights and darks washed apart.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <i class="fa-solid fa-building"></i>
-                            <div>
-                                <h4>Commercial Wash Services</h4>
-                                <p>Bulk laundry for businesses.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <i class="fa-solid fa-leaf"></i>
-                            <div>
-                                <h4>Eco-Friendly Washing</h4>
-                                <p>Gentle on your clothes and the planet.</p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <i class="fa-solid fa-soap"></i>
-                            <div>
-                                <h4>Stain Removal</h4>
-                                <p>Tough stains treated with care.</p>
-                            </div>
-                        </div>
-
-                    </div>
+          <div class="services-card">
+            <div class="services-info">
+              <div class="service-item">
+                <i class="fa-solid fa-shirt"></i>
+                <div>
+                  <h4>Wash, Rinse &amp; Fold</h4>
+                  <p>Clean, fresh and neatly folded.</p>
                 </div>
+              </div>
+
+              <div class="service-item">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                  <h4>Color-separated Wash</h4>
+                  <p>Lights and darks washed apart.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <i class="fa-solid fa-building"></i>
+                <div>
+                  <h4>Commercial Wash Services</h4>
+                  <p>Bulk laundry for businesses.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <i class="fa-solid fa-leaf"></i>
+                <div>
+                  <h4>Eco-Friendly Washing</h4>
+                  <p>Gentle on your clothes and the planet.</p>
+                </div>
+              </div>
+
+              <div class="service-item">
+                <i class="fa-solid fa-soap"></i>
+                <div>
+                  <h4>Stain Removal</h4>
+                  <p>Tough stains treated with care.</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
+      <!-- PRICING SECTION -->
+      <div class="pricing">
+        <h3 class="pricing-title">Pricing Packages</h3>
 
-        <!-- PRICING SECTION -->
-        <div class="pricing">
+        <div class="pricing-cards">
+          <!-- BASKETS -->
+          <div class="price-card">
+            <h4>Baskets</h4>
+            <ul>
+              <li><span>Small</span> <strong>R100</strong></li>
+              <li><span>Large</span> <strong>R150</strong></li>
+              <li><span>X Large</span> <strong>R180</strong></li>
+            </ul>
+          </div>
 
-            <h3 class="pricing-title">Pricing Packages</h3>
+          <!-- BLANKETS -->
+          <div class="price-card">
+            <h4>Blankets</h4>
+            <ul>
+              <li><span>Small</span> <strong>R80</strong></li>
+              <li><span>Medium</span> <strong>R120</strong></li>
+              <li><span>Large</span> <strong>R150</strong></li>
+            </ul>
+          </div>
 
-            <div class="pricing-cards">
+          <!-- DELIVERY -->
+          <div class="price-card">
+            <h4>Delivery</h4>
+            <ul>
+              <li><span>From</span> <strong>R40</strong></li>
+              <li><span>Dry only from</span> <strong>R50</strong></li>
+            </ul>
 
-                <!-- BASKETS -->
-                <div class="price-card">
-                    <h4>Baskets</h4>
-                    <ul>
-                        <li><span>Small</span> <strong>R100</strong></li>
-                        <li><span>Large</span> <strong>R150</strong></li>
-                        <li><span>X Large</span> <strong>R180</strong></li>
-                    </ul>
-                </div>
+            <p class="price-note">
+              Same day laundromat<br />
+              Softener &amp; perfume
+            </p>
+          </div>
+           <div class="price-card">
+        <h4>Other Services</h4>
 
-                <!-- BLANKETS -->
-                <div class="price-card">
-                    <h4>Blankets</h4>
-                    <ul>
-                        <li><span>Small</span> <strong>R80</strong></li>
-                        <li><span>Medium</span> <strong>R120</strong></li>
-                        <li><span>Large</span> <strong>R150</strong></li>
-                    </ul>
-                </div>
-
-                <!-- DELIVERY -->
-                <div class="price-card">
-                    <h4>Delivery</h4>
-                    <ul>
-                        <li><span>From</span> <strong>R40</strong></li>
-                        <li><span>Dry only from</span> <strong>R50</strong></li>
-                    </ul>
-
-                    <p class="price-note">
-                        Same day laundromat<br>
-                        Softener &amp; perfume
-                    </p>
-                </div>
-
-            </div>
+        <p class="price-note">
+          7 seater<br />
+          Car Hire, also &amp; can be used as van
+        </p>
+      </div>
         </div>
+      </div>
 
+     
     </section>
     <!-- END SERVICES SECTION -->
 
-
     <!-- ABOUT SECTION -->
     <section id="About" class="about-section">
-
-        <div class="about-container">
-
-            <div class="about-image">
-                <img src="shirt-cutout.png"
-                    alt="Freshly cleaned laundry">
-            </div>
-
-            <div class="about-content">
-
-               <span class="about-tag">GET TO KNOW US</span>
-
-                <h2>
-                About <span>SiyAfika</span>
-                </h2>
-
-                <p>
-                    SiyAfika Laundromat is dedicated to making
-                    laundry easier with fresh, clean and reliable
-                    services. We take pride in providing quality
-                    and eco-friendly laundry care, delivered with
-                    care and convenience.
-                </p>
-
-                <p>
-                    With experienced and friendly staff, we aim
-                    to give every customer a convenient and
-                    dependable laundry experience.
-                </p>
-
-               <div class="about-highlights">
-
-                <div class="about-highlight">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <div>
-                        <h4>Convenience</h4>
-                        <span>Pickup & delivery</span>
-                    </div>
-                </div>
-
-                <div class="about-highlight">
-                    <i class="fa-solid fa-shirt"></i>
-                    <div>
-                        <h4>Quality Care</h4>
-                        <span>Care for every garment</span>
-                    </div>
-                </div>
-
-                <div class="about-highlight">
-                    <i class="fa-solid fa-leaf"></i>
-                    <div>
-                        <h4>Eco-Friendly</h4>
-                        <span>Thoughtful laundry care</span>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <a href="#Services" class="about-btn">
-                Explore Our Services
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
+      <div class="about-container">
+        <div class="about-image">
+          <img src="shirt-cutout.png" alt="Freshly cleaned laundry" />
         </div>
 
-    </div>
+        <div class="about-content">
+          <span class="about-tag">GET TO KNOW US</span>
 
-</section>
+          <h2>About <span>SiyAfika</span></h2>
+
+          <p>
+            SiyAfika Laundromat is dedicated to making laundry easier with
+            fresh, clean and reliable services. We take pride in providing
+            quality and eco-friendly laundry care, delivered with care and
+            convenience.
+          </p>
+
+          <p>
+            With experienced and friendly staff, we aim to give every customer a
+            convenient and dependable laundry experience.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight">
+              <i class="fa-solid fa-truck-fast"></i>
+              <div>
+                <h4>Convenience</h4>
+                <span>Pickup & delivery</span>
+              </div>
+            </div>
+
+            <div class="about-highlight">
+              <i class="fa-solid fa-shirt"></i>
+              <div>
+                <h4>Quality Care</h4>
+                <span>Care for every garment</span>
+              </div>
+            </div>
+
+            <div class="about-highlight">
+              <i class="fa-solid fa-leaf"></i>
+              <div>
+                <h4>Eco-Friendly</h4>
+                <span>Thoughtful laundry care</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#Services" class="about-btn">
+            Explore Our Services
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
     <!-- END ABOUT SECTION -->
-
 
     <!-- HOW IT WORKS / VISIT US SECTION -->
     <section id="HowItWorks" class="info-section">
+      <div class="section-heading">
+        <span>VISIT US</span>
+        <h2>How It Works</h2>
+        <p>Everything you need to know before visiting us.</p>
+      </div>
 
-        <div class="section-heading">
-            <span>VISIT US</span>
-            <h2>How It Works</h2>
-            <p>Everything you need to know before visiting us.</p>
+      <div class="info-grid">
+        <!-- LAUNDRY IMAGE -->
+        <div class="info-card hours-card">
+          <div class="card-image">
+            <img
+              src="option-B-no-background.png"
+              alt="Laundry hanging to dry"
+            />
+          </div>
         </div>
 
-        <div class="info-grid">
+        <!-- LOCATION -->
+        <div class="info-card location-card">
+          <div class="location-heading">
+            <span>FIND US</span>
+            <h3>Our Location</h3>
+            <p>Come visit us. We'd love to help!</p>
+          </div>
 
-            <!-- LAUNDRY IMAGE -->
-            <div class="info-card hours-card">
-                <div class="card-image">
-                    <img src="option-B-no-background.png"
-                        alt="Laundry hanging to dry">
-                </div>
-            </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6930.580642116764!2d30.9407583557279!3d-29.711348519566375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef703f211970ad9%3A0x3d9c0a9e151f2c63!2sSiyAfika%20Laundromat!5e0!3m2!1sen!2sza!4v1793912647722!5m2!1sen!2sza"
+              width="300"
+              height="400"
+              style="border: 0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            >
+            </iframe>
+          </div>
 
-            <!-- LOCATION -->
-            <div class="info-card location-card">
-
-                <div class="location-heading">
-                    <span>FIND US</span>
-                    <h3>Our Location</h3>
-                    <p>Come visit us. We'd love to help!</p>
-                </div>
-
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6930.580642116764!2d30.9407583557279!3d-29.711348519566375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef703f211970ad9%3A0x3d9c0a9e151f2c63!2sSiyAfika%20Laundromat!5e0!3m2!1sen!2sza!4v1793912647722!5m2!1sen!2sza"
-                        width="300"
-                        height="400"
-                        style="border:0;"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
-                </div>
-
-                <a
-                    class="directions-btn"
-                    href="https://www.google.com/maps/search/?api=1&query=A1305%20Freedom%20Charter%20Street%20Inanda%20Newtown%20Ethekwini"
-                    target="_blank"
-                    rel="noopener">
-                    Get Directions →
-                </a>
-
-            </div>
+          <a
+            class="directions-btn"
+            href="https://www.google.com/maps/search/?api=1&query=A1305%20Freedom%20Charter%20Street%20Inanda%20Newtown%20Ethekwini"
+            target="_blank"
+            rel="noopener"
+          >
+            Get Directions →
+          </a>
         </div>
-
+      </div>
     </section>
-
 
     <!-- OTHER SERVICES -->
-    <section id="OtherServices">
-
-        <div class="price-card">
-            <h4>Other Services</h4>
-
-            <p class="price-note">
-                7 seater<br>
-                Car Hire, also &amp; can be used as van
-            </p>
-        </div>
-
-    </section>
-
+    
 
     <!-- CONTACT SECTION -->
     <section id="Contact" class="contact-section">
+      <div class="contact-container">
+        <!-- LEFT SIDE: LAUNDROMAT IMAGE -->
+        <div class="contact-image">
+          <img
+            src="phone.png"
+            alt="SiyAfika Laundromat washing machines and fresh laundry"
+          />
 
-        <div class="contact-container">
-
-            <!-- LEFT SIDE: LAUNDROMAT IMAGE -->
-            <div class="contact-image">
-
-                <img src="phone.png"
-                    alt="SiyAfika Laundromat washing machines and fresh laundry">
-
-                <div class="contact-image-caption">
-                    <h3>Fresh &amp; Clean</h3>
-                    <p>Delivered with care.</p>
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT SIDE: CONTACT INFORMATION -->
-            <div class="contact-content">
-
-                <p class="contact-brand">SIYAFIKA LAUNDROMAT</p>
-
-                <div class="contact-heading">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    <h2>Contact Us</h2>
-
-                    <i class="fa-solid fa-xmark"></i>
-
-                </div>
-
-
-                <!-- CONTACT DETAILS CARD -->
-                <div class="contact-card">
-
-                    <!-- PHONE NUMBERS -->
-                    <a href="tel:+27614422382" class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>061 442 2382</span>
-                    </a>
-
-                    <a href="tel:+27798623910" class="contact-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>079 862 3910</span>
-                    </a>
-
-
-                    <!-- EMAIL -->
-                    <a href="mailto:siyafikalaundromat@gmail.com"
-                        class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>siyafikalaundromat@gmail.com</span>
-                    </a>
-
-
-                    <!-- ADDRESS -->
-                    <div class="contact-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>
-                            A1305 Freedom Charter Street,<br>
-                            Inanda Newtown
-                        </span>
-                    </div>
-
-
-                    <!-- BUSINESS HOURS -->
-                    <div class="contact-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <span>
-                            Monday – Sunday<br>
-                            7:00 AM – 6:00 PM
-                        </span>
-                    </div>
-
-
-                    <!-- WHATSAPP CONTACT -->
-                    <a href="https://wa.me/27614422382?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
-                        target="_blank"
-                        rel="noopener"
-                        class="contact-whatsapp">
-
-                        <i class="fa-brands fa-whatsapp"></i>
-                        Chat With Us on WhatsApp
-
-                    </a>
-
-                </div>
-
-                <p class="contact-footer">
-                    SiyAfika Laundromat · Fresh &amp; Clean, Delivered
-                </p>
-
-            </div>
+          <div class="contact-image-caption">
+            <h3>Fresh &amp; Clean</h3>
+            <p>Delivered with care.</p>
+          </div>
         </div>
 
-    </section>
+        <!-- RIGHT SIDE: CONTACT INFORMATION -->
+        <div class="contact-content">
+          <p class="contact-brand">SIYAFIKA LAUNDROMAT</p>
 
+          <div class="contact-heading">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <h2>Contact Us</h2>
+
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
+          <!-- CONTACT DETAILS CARD -->
+          <div class="contact-card">
+            <!-- PHONE NUMBERS -->
+            <a href="tel:+27614422382" class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>061 442 2382</span>
+            </a>
+
+            <a href="tel:+27798623910" class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>079 862 3910</span>
+            </a>
+
+            <!-- EMAIL -->
+            <a href="mailto:siyafikalaundromat@gmail.com" class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>siyafikalaundromat@gmail.com</span>
+            </a>
+
+            <!-- ADDRESS -->
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>
+                A1305 Freedom Charter Street,<br />
+                Inanda Newtown
+              </span>
+            </div>
+
+            <!-- BUSINESS HOURS -->
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>
+                Monday – Sunday<br />
+                7:00 AM – 6:00 PM
+              </span>
+            </div>
+
+            <!-- WHATSAPP CONTACT -->
+            <a
+              href="https://wa.me/27614422382?text=Hi%20SiyAfika%2C%20I%27d%20like%20to%20request%20a%20pickup"
+              target="_blank"
+              rel="noopener"
+              class="contact-whatsapp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Chat With Us on WhatsApp
+            </a>
+          </div>
+
+          <p class="contact-footer">
+            SiyAfika Laundromat · Fresh &amp; Clean, Delivered
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
+      <!-- SOCIAL MEDIA -->
+      <div class="footer-social">
+        <a
+          href="https://wa.me/27614422382"
+          target="_blank"
+          rel="noopener"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-        <!-- SOCIAL MEDIA -->
-        <div class="footer-social">
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
 
-            <a href="https://wa.me/27614422382"
-                target="_blank"
-                rel="noopener"
-                aria-label="WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
 
-            <a href="#" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
+        <a href="#" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
 
-            <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+      <!-- BUSINESS DESCRIPTION -->
+      <div class="footer-description">
+        <p>
+          SiyAfika Laundromat is dedicated to making laundry easier with fresh,
+          clean and reliable services. We take pride in providing quality and
+          eco-friendly laundry care, delivered with care and convenience.
+        </p>
+      </div>
 
-            <a href="#" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
+      <!-- LOGO -->
+      <div class="footer-brand">
+        <img
+          src="logo.png"
+          alt="SiyAfika Laundromat Logo"
+          class="footer-logo"
+        />
+      </div>
 
-        </div>
+      <!-- LOCATION -->
+      <div class="footer-location">
+    <p>A 1305 Freedom Charter St, Inanda, Newtown</p>
+    <p>Open Mon – Sun | 7:00 AM – 6:00 PM</p>
+</div>
 
-
-        <!-- BUSINESS DESCRIPTION -->
-        <div class="footer-description">
-            <p>
-                SiyAfika Laundromat is dedicated to making
-                laundry easier with fresh, clean and reliable
-                services. We take pride in providing quality
-                and eco-friendly laundry care, delivered with
-                care and convenience.
-            </p>
-        </div>
-
-
-        <!-- LOGO -->
-        <div class="footer-brand">
-            <img src="logo.png"
-                alt="SiyAfika Laundromat Logo"
-                class="footer-logo">
-        </div>
-
-
-        <!-- LOCATION -->
-        <div class="footer-location">
-            <p>South Africa | ZAR (R)</p>
-        </div>
-
-
-        <!-- COPYRIGHT -->
-        <div class="footer-bottom">
-            <p>
-                © 2020 SiyAfika Laundromat.
-                All Rights Reserved.
-            </p>
-        </div>
-
+      <!-- COPYRIGHT -->
+      <div class="footer-bottom">
+        <p>© 2020 SiyAfika Laundromat. All Rights Reserved.</p>
+      </div>
     </footer>
-
 
     <!-- AI CHATBOT WIDGET -->
     <div class="ai-chat-widget">
+      <!-- FLOATING AI BUTTON -->
+      <button class="ai-chat-button" id="aiChatButton">
+        <i class="fa-solid fa-robot"></i>
+        <span>Ask SiyAfika AI</span>
+      </button>
 
-        <!-- FLOATING AI BUTTON -->
-        <button class="ai-chat-button" id="aiChatButton">
-            <i class="fa-solid fa-robot"></i>
-            <span>Ask SiyAfika AI</span>
-        </button>
-
-
-        <!-- CHAT WINDOW -->
-        <div class="ai-chat-window" id="aiChatWindow">
-
-            <!-- CHAT HEADER -->
-            <div class="ai-chat-header">
-
-                <div class="ai-chat-profile">
-                    <div class="ai-avatar">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-
-                    <div>
-                        <h3>SiyAfika AI</h3>
-                        <span>Here to help you!</span>
-                    </div>
-                </div>
-
-                <button class="ai-close-button" id="aiCloseButton">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
+      <!-- CHAT WINDOW -->
+      <div class="ai-chat-window" id="aiChatWindow">
+        <!-- CHAT HEADER -->
+        <div class="ai-chat-header">
+          <div class="ai-chat-profile">
+            <div class="ai-avatar">
+              <i class="fa-solid fa-robot"></i>
             </div>
 
-
-            <!-- CHAT MESSAGES -->
-            <div class="ai-chat-messages" id="aiChatMessages">
-
-                <div class="ai-message bot-message">
-                    Hi there! 👋 Welcome to SiyAfika Laundromat.
-
-                    I'm your virtual assistant. How can I help you today?
-                </div>
-
-                <div class="ai-message bot-message">
-                    You can ask me about our laundry services, pricing or pickup and delivery.
-                </div>
-
+            <div>
+              <h3>SiyAfika AI</h3>
+              <span>Here to help you!</span>
             </div>
+          </div>
 
-
-            <!-- CHAT INPUT -->
-            <form class="ai-chat-input" id="aiChatForm">
-
-                <input
-                    type="text"
-                    id="aiMessageInput"
-                    placeholder="Type your message..."
-                    autocomplete="off"
-                    required>
-
-                <button type="submit">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-
-            </form>
-
+          <button class="ai-close-button" id="aiCloseButton">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
-    </div>
 
+        <!-- CHAT MESSAGES -->
+        <div class="ai-chat-messages" id="aiChatMessages">
+          <div class="ai-message bot-message">
+            Hi there! 👋 Welcome to SiyAfika Laundromat. I'm your virtual
+            assistant. How can I help you today?
+          </div>
+
+          <div class="ai-message bot-message">
+            You can ask me about our laundry services, pricing or pickup and
+            delivery.
+          </div>
+        </div>
+
+        <!-- CHAT INPUT -->
+        <form class="ai-chat-input" id="aiChatForm">
+          <input
+            type="text"
+            id="aiMessageInput"
+            placeholder="Type your message..."
+            autocomplete="off"
+            required
+          />
+
+          <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script>
+      // CHATBOT ELEMENTS
+      const aiChatButton = document.getElementById("aiChatButton");
+      const aiChatWindow = document.getElementById("aiChatWindow");
+      const aiCloseButton = document.getElementById("aiCloseButton");
 
-        // CHATBOT ELEMENTS
-        const aiChatButton = document.getElementById("aiChatButton");
-        const aiChatWindow = document.getElementById("aiChatWindow");
-        const aiCloseButton = document.getElementById("aiCloseButton");
+      const aiChatForm = document.getElementById("aiChatForm");
+      const aiMessageInput = document.getElementById("aiMessageInput");
+      const aiChatMessages = document.getElementById("aiChatMessages");
 
-        const aiChatForm = document.getElementById("aiChatForm");
-        const aiMessageInput = document.getElementById("aiMessageInput");
-        const aiChatMessages = document.getElementById("aiChatMessages");
+      // OPEN CHAT
+      aiChatButton.addEventListener("click", function () {
+        aiChatWindow.classList.add("active");
+        aiChatButton.style.display = "none";
+      });
 
+      // CLOSE CHAT
+      aiCloseButton.addEventListener("click", function () {
+        aiChatWindow.classList.remove("active");
+        aiChatButton.style.display = "flex";
+      });
 
-        // OPEN CHAT
-        aiChatButton.addEventListener("click", function () {
-            aiChatWindow.classList.add("active");
-            aiChatButton.style.display = "none";
-        });
+      // SEND MESSAGE
 
+      // SEND MESSAGE TO AI
+      aiChatForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-        // CLOSE CHAT
-        aiCloseButton.addEventListener("click", function () {
-            aiChatWindow.classList.remove("active");
-            aiChatButton.style.display = "flex";
-        });
+        const message = aiMessageInput.value.trim();
 
+        if (message === "") return;
 
-        // SEND MESSAGE
-        
-// SEND MESSAGE TO AI
-aiChatForm.addEventListener("submit", async function (event) {
+        // Display customer's message
+        const userMessage = document.createElement("div");
 
-    event.preventDefault();
+        userMessage.className = "ai-message user-message";
+        userMessage.textContent = message;
 
-    const message = aiMessageInput.value.trim();
+        aiChatMessages.appendChild(userMessage);
 
-    if (message === "") return;
+        // Clear input
+        aiMessageInput.value = "";
 
-    // Display customer's message
-    const userMessage = document.createElement("div");
+        // Display loading message
+        const loadingMessage = document.createElement("div");
 
-    userMessage.className = "ai-message user-message";
-    userMessage.textContent = message;
+        loadingMessage.className = "ai-message bot-message";
+        loadingMessage.textContent = "SiyAfika AI is typing...";
 
-    aiChatMessages.appendChild(userMessage);
+        aiChatMessages.appendChild(loadingMessage);
 
-    // Clear input
-    aiMessageInput.value = "";
+        aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
 
-    // Display loading message
-    const loadingMessage = document.createElement("div");
-
-    loadingMessage.className = "ai-message bot-message";
-    loadingMessage.textContent = "SiyAfika AI is typing...";
-
-    aiChatMessages.appendChild(loadingMessage);
-
-    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
-    try {
-
-        // Send message to backend
-        const response = await fetch("http://localhost:3000/api/chat", {
-
+        try {
+          // Send message to backend
+          const response = await fetch("http://localhost:3000/api/chat", {
             method: "POST",
 
             headers: {
-                "Content-Type": "application/json"
+              "Content-Type": "application/json",
             },
 
             body: JSON.stringify({
-                message: message
-            })
+              message: message,
+            }),
+          });
 
-        });
+          const data = await response.json();
 
-        const data = await response.json();
-
-        if (!response.ok) {
+          if (!response.ok) {
             throw new Error(data.error || "Unable to get a response.");
+          }
+
+          // Display AI response
+          loadingMessage.textContent = data.reply;
+        } catch (error) {
+          console.error("Chatbot error:", error);
+
+          loadingMessage.textContent =
+            "Sorry, I couldn't connect right now. Please try again.";
         }
 
-        // Display AI response
-        loadingMessage.textContent = data.reply;
+        // Scroll to latest message
+        aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+      });
 
-    } catch (error) {
+      // MOBILE NAVIGATION
+      const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const icon = menuToggle.querySelector('i');
 
-        console.error("Chatbot error:", error);
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
 
-        loadingMessage.textContent =
-            "Sorry, I couldn't connect right now. Please try again.";
-
-    }
-
-    // Scroll to latest message
-    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
-
+  if (mobileMenu.classList.contains('active')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
 });
 
-
-
-        // MOBILE NAVIGATION
-        const menuToggle = document.getElementById("menu-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        menuToggle.addEventListener("click", function () {
-
-            navMenu.classList.toggle("active");
-
-            const isOpen = navMenu.classList.contains("active");
-
-            menuToggle.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark"></i>'
-                : '<i class="fa-solid fa-bars"></i>';
-
-            menuToggle.setAttribute("aria-expanded", isOpen);
-
-        });
-
-
-        // CLOSE MENU AFTER CLICKING A LINK
-        document.querySelectorAll(".nav-menu a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("active");
-
-                menuToggle.innerHTML =
-                    '<i class="fa-solid fa-bars"></i>';
-
-                menuToggle.setAttribute("aria-expanded", "false");
-
-            });
-
-        });
-
-        const navbar = document.querySelector("nav");
-
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 100) {
-                navbar.classList.add("hide-nav");
-        } else {
-        navbar.classList.remove("hide-nav");
-    }
+// Close menu when clicking any link
+document.querySelectorAll('.mobile-link, .mobile-btn').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  });
 });
-
     </script>
-
-</body>
+  </body>
 </html>
